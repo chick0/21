@@ -18,6 +18,20 @@ export default [
         },
     },
     {
-        ignores: ["build/", ".svelte-kit/", "dist/"],
+        ignores: [
+            // Ignore files for SvelteKit
+            ".svelte-kit/",
+
+            // Ignore for build result
+            "build/",
+            "dist/",
+
+            // Ignore files for PNPM, NPM and YARN
+            ".yarn/",
+            "yarn.lock",
+            "pnpm-lock.yaml",
+            "package-lock.json",
+            "node_modules/",
+        ],
     },
 ]
