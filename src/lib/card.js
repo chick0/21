@@ -1,3 +1,5 @@
+import { POINT_JACK, POINT_QUEEN, POINT_KING } from "$lib/options"
+
 /**
  * @param {import("$lib/types/Card").Card} card
  */
@@ -58,7 +60,7 @@ export function getCardSuffix(card) {
         return "King"
     }
 
-    if (Number(last) > 1) {
+    if (!isNaN(Number(last))) {
         return last
     }
 
@@ -67,6 +69,52 @@ export function getCardSuffix(card) {
     }
 
     return ""
+}
+
+/**
+ * @param {import("$lib/types/Card").Card} card
+ * @returns {Number}
+ */
+export function getCardNumber(card) {
+    if (card == "Back") {
+        return 0
+    }
+
+    const last = card.charAt(card.length - 1)
+
+    const parseResult = Number(last)
+
+    if (!isNaN(parseResult)) {
+        return parseResult
+    }
+
+    if (last == "X") {
+        return 10
+    }
+
+    if (last == "J") {
+        return POINT_JACK
+    }
+    if (last == "Q") {
+        return POINT_QUEEN
+    }
+    if (last == "K") {
+        return POINT_KING
+    }
+
+    return 0
+}
+
+/**
+ * @param {Number} total
+ * @returns {Number}
+ */
+export function getAceNumber(total) {
+    if (total <= 10) {
+        return 11
+    }
+
+    return 1
 }
 
 /** @type {import("$lib/types/Card").Card[]} */
