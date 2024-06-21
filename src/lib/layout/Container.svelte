@@ -6,8 +6,9 @@
     .container {
         --container: 250px;
 
-        padding-top: 20px;
-        padding-bottom: 20px;
+        min-height: 100vh;
+        padding-top: 40px;
+        padding-bottom: 40px;
 
         padding-left: var(--container);
         padding-right: var(--container);
