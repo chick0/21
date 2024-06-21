@@ -1,5 +1,6 @@
 import { writable } from "svelte/store"
 import { createGameDeck } from "$lib/deck"
+import { START_CARD } from "$lib/options"
 
 export const LockConut = writable(0)
 
@@ -26,7 +27,7 @@ export const Player = writable([])
 /**
  * @param {Number} startCard
  */
-export function resetGame(startCard = 2) {
+export function resetGame(startCard = START_CARD) {
     let deck = createGameDeck()
 
     /** @type {import("$lib/types/Card").Card[]} */

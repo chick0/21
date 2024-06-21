@@ -1,10 +1,11 @@
 import { CardList } from "$lib/card"
+import { DECK_COUNT } from "$lib/options"
 
 /**
  * @param {Number} set
  * @returns {import("$lib/types/Card").Card[]}
  */
-export function createGameDeck(set = 2) {
+export function createGameDeck(set = DECK_COUNT) {
     /** @type {import("$lib/types/Card").Card[]} */
     let result = []
 
