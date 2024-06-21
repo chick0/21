@@ -1,0 +1,13 @@
+*.cmd       text eol=crlf 
+*.sh        text eol=lf
+
+.env        text eol=lf
+
+*.md        text eol=lf
+*.json      text eol=lf
+
+*.ts        text eol=lf
+*.js        text eol=lf
+*.mjs       text eol=lf
+*.svelte    text eol=lf
+*.html      text eol=lf
