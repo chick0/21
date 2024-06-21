@@ -9,7 +9,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "21@workspace:."
   dependencies:
-    "@sveltejs/adapter-auto": "npm:^3.2.2"
+    "@sveltejs/adapter-static": "npm:^3.0.2"
     "@sveltejs/kit": "npm:^2.5.17"
     "@sveltejs/vite-plugin-svelte": "npm:^3.1.1"
     "@types/eslint": "npm:^8.56.10"
@@ -502,14 +502,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-auto@npm:^3.2.2":
-  version: 3.2.2
-  resolution: "@sveltejs/adapter-auto@npm:3.2.2"
-  dependencies:
-    import-meta-resolve: "npm:^4.1.0"
+"@sveltejs/adapter-static@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@sveltejs/adapter-static@npm:3.0.2"
   peerDependencies:
     "@sveltejs/kit": ^2.0.0
-  checksum: 10/b1102c13c1c1dc5d8a9901320e234712feddb09ad0f50f3c7ea7546d6dcf46c1a38c858089fba7a011034627c05b218253827c1a6446a8056d5f20357eb7e561
+  checksum: 10/d7a90f7c3ec1c86e0d779dcdca3914e8fae92d0d5a037a3b4eb44b3b730385261d031cccf17c618ff9e148838db26b03f635874b0d00f5b1d8161f32e5fd7d33
   languageName: node
   linkType: hard
 

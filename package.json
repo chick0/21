@@ -11,7 +11,7 @@
         "lint:write": "prettier --write ."
     },
     "devDependencies": {
-        "@sveltejs/adapter-auto": "^3.2.2",
+        "@sveltejs/adapter-static": "^3.0.2",
         "@sveltejs/kit": "^2.5.17",
         "@sveltejs/vite-plugin-svelte": "^3.1.1",
         "@types/eslint": "^8.56.10",
