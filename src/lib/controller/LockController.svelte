@@ -23,9 +23,3 @@
         }
     })
 </script>
-
-<style>
-    :global(body.lock) {
-        overflow: hidden;
-    }
-</style>
