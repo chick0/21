@@ -6,10 +6,18 @@
 
     import SpinnerWrapper from "$lib/layout/SpinnerWrapper.svelte"
     import Spinner from "$lib/props/Spinner.svelte"
-    import CardWrapper from "$lib/layout/CardWrapper.svelte"
+    import Table from "$lib/layout/Table.svelte"
     import Card from "$lib/props/Card.svelte"
 
     let isMounted = false
+
+    let computerScore = 0
+
+    $: if ($GameStatus == "result") {
+        computerScore = getHandScore($Computer)
+    } else {
+        computerScore = getLimitedHandScore($Computer)
+    }
 
     onMount(() => {
         isMounted = true
@@ -78,18 +86,7 @@
     </SpinnerWrapper>
 {:else}
     <div>
-        <button on:click={() => resetGame()}>Reset</button>
-    </div>
-
-    <div>
-        <h1 class="name">Computer</h1>
-        {#if $GameStatus == "result"}
-            <p class="score">{getHandScore($Computer)}</p>
-        {:else}
-            <p class="score">{getLimitedHandScore($Computer)}</p>
-        {/if}
-
-        <CardWrapper>
+        <Table name="Computer" score={computerScore}>
             {#each $Computer as card, i}
                 {#if i == 0 || $GameStatus == "result"}
                     <Card {card} />
@@ -97,20 +94,23 @@
                     <Card card="Back" />
                 {/if}
             {/each}
-        </CardWrapper>
+        </Table>
     </div>
 
     <div>
-        <h1 class="name">Player</h1>
-        <p class="score">{getHandScore($Player)}</p>
-
-        <CardWrapper>
+        <Table name="Player" score={getHandScore($Player)}>
             {#each $Player as card}
                 <Card {card} />
             {/each}
-        </CardWrapper>
+        </Table>
+    </div>
 
-        <button on:click={playerHit}>Hit</button>
-        <button on:click={playerStand}>Stand</button>
+    <div>
+        {#if $GameStatus == "result"}
+            <button on:click={() => resetGame()}>Reset</button>
+        {:else}
+            <button on:click={playerHit}>Hit</button>
+            <button on:click={playerStand}>Stand</button>
+        {/if}
     </div>
 {/if}
