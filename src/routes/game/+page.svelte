@@ -3,6 +3,7 @@
     import { Computer, GameStatus, Player, resetGame } from "$lib/store"
     import { getHandScore, getLimitedHandScore } from "$lib/score"
     import { hitCard, actionAuto, getWinner } from "$lib/action"
+    import { gameBust, gameDraw, gameLose, gameWin } from "$lib/message"
 
     import SpinnerWrapper from "$lib/layout/SpinnerWrapper.svelte"
     import Spinner from "$lib/props/Spinner.svelte"
@@ -53,8 +54,9 @@
         computerAction()
 
         if (getHandScore($Player) > 21) {
-            alert("bust")
-            calcGameResult()
+            gameBust().then(() => {
+                calcGameResult()
+            })
         }
     }
 
@@ -77,7 +79,20 @@
         GameStatus.set("result")
 
         const winner = getWinner($Computer, $Player)
-        alert(winner)
+
+        switch (winner) {
+            case "computer":
+                gameLose()
+                break
+
+            case "player":
+                gameWin()
+                break
+
+            default:
+                gameDraw()
+                break
+        }
     }
 </script>
 

@@ -21,6 +21,7 @@ __metadata:
     prettier-plugin-svelte: "npm:^3.2.5"
     svelte: "npm:^4.2.18"
     svelte-check: "npm:^3.8.1"
+    sweetalert2: "npm:^11.12.0"
     typescript: "npm:^5.5.2"
     vite: "npm:^5.3.1"
   languageName: unknown
@@ -2776,6 +2777,13 @@ __metadata:
     magic-string: "npm:^0.30.4"
     periscopic: "npm:^3.1.0"
   checksum: 10/281790609d4ad86b93131858e5b94bef6faa9959018198ea78d9fff3cdc367294fd85e5dc43ccfc7e88e8110dc60bce664ff7f1a72a04624e7487f2f5444bd6d
+  languageName: node
+  linkType: hard
+
+"sweetalert2@npm:^11.12.0":
+  version: 11.12.0
+  resolution: "sweetalert2@npm:11.12.0"
+  checksum: 10/b5021aaec5c060eabeff6c327bf08dbe1cd0e6f2f55ff426b53fe63602dca5b865fc3abb190ec876652e8e9fae6cf4de72066b4616da47f1c7b2cd564eb6a5b3
   languageName: node
   linkType: hard
 
