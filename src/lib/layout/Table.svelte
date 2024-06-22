@@ -10,8 +10,6 @@
         flex-wrap: nowrap;
         overflow-x: auto;
 
-        justify-content: center;
-
         border: 2px solid #bbbbbb;
         border-radius: 24px;
 
