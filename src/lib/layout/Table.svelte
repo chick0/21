@@ -7,7 +7,8 @@
         display: flex;
         gap: 15px;
 
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        overflow-x: auto;
 
         justify-content: center;
 
