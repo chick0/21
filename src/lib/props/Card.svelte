@@ -9,4 +9,4 @@
     $: alt = (getCardPrefix(card) + " " + getCardSuffix(card)).trim()
 </script>
 
-<img class="card" src={getCardPath(card)} {alt} title={alt} />
+<img class="card" src={getCardPath(card)} {alt} title={alt} width="140" height="190" />

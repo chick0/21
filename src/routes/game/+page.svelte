@@ -8,6 +8,7 @@
     import Spinner from "$lib/props/Spinner.svelte"
     import Table from "$lib/layout/Table.svelte"
     import Card from "$lib/props/Card.svelte"
+    import Score from "$lib/props/Score.svelte"
 
     let isMounted = false
 
@@ -86,7 +87,7 @@
     </SpinnerWrapper>
 {:else}
     <div>
-        <Table name="Computer" score={computerScore}>
+        <Table>
             {#each $Computer as card, i}
                 {#if i == 0 || $GameStatus == "result"}
                     <Card {card} />
@@ -95,19 +96,27 @@
                 {/if}
             {/each}
         </Table>
+
+        <Score>
+            {computerScore}
+        </Score>
     </div>
 
     <div>
-        <Table name="Player" score={getHandScore($Player)}>
+        <Table>
             {#each $Player as card}
                 <Card {card} />
             {/each}
         </Table>
+
+        <Score>
+            {getHandScore($Player)}
+        </Score>
     </div>
 
     <div>
         {#if $GameStatus == "result"}
-            <button on:click={() => resetGame()}>Reset</button>
+            <button on:click={() => resetGame()}>RESTART</button>
         {:else}
             <button on:click={playerHit}>Hit</button>
             <button on:click={playerStand}>Stand</button>
