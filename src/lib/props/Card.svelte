@@ -10,3 +10,9 @@
 </script>
 
 <img class="card" src={getCardPath(card)} {alt} title={alt} width="140" height="190" />
+
+<style>
+    .card:first-child {
+        margin-left: 20px;
+    }
+</style>
