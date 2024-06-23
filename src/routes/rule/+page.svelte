@@ -1,5 +1,9 @@
 <script>
+    import { PageDescription, PageTitle } from "$lib/store"
     import { DECK_COUNT, START_CARD, POINT_JACK, POINT_KING, POINT_QUEEN } from "$lib/options"
+
+    PageTitle.set("규칙")
+    PageDescription.set("규칙을 소개합니다.")
 </script>
 
 <h1>규칙</h1>

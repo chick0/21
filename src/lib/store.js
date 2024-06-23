@@ -1,9 +1,18 @@
 import { writable } from "svelte/store"
-import { createGameDeck } from "$lib/deck"
 import { START_CARD } from "$lib/options"
+import { createGameDeck } from "$lib/deck"
 
+/** 페이지 제목 */
 export const PageTitle = writable("21!")
+
+/** 페이지 설명 */
 export const PageDescription = writable("")
+
+/** 페이지 제목 및 설정을 초기화 */
+export function PageMetaReset() {
+    PageTitle.set("21!")
+    PageDescription.set("")
+}
 
 export const LockConut = writable(0)
 
