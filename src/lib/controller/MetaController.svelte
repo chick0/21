@@ -1,10 +1,11 @@
 <script>
-    import { PageTitle, PageDescription } from "$lib/store"
+    export let title = "21!"
+    export let description = ""
 </script>
 
 <svelte:head>
-    <title>{$PageTitle}</title>
-    <meta name="description" content={$PageDescription} />
-    <meta property="og:title" content={$PageTitle} />
-    <meta property="og:description" content={$PageDescription} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
 </svelte:head>

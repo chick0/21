@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte"
-    import { PageMetaReset, Computer, GameStatus, Player, resetGame } from "$lib/store"
+    import { Computer, GameStatus, Player, resetGame } from "$lib/store"
     import { getHandScore, getLimitedHandScore } from "$lib/score"
     import { hitCard, actionAuto, getWinner } from "$lib/action"
     import { gameBust, gameDraw, gameLose, gameWin } from "$lib/message"
@@ -20,8 +20,6 @@
     } else {
         computerScore = getLimitedHandScore($Computer)
     }
-
-    PageMetaReset()
 
     onMount(() => {
         isMounted = true
