@@ -1,0 +1,23 @@
+# Ignore files for PNPM, NPM and YARN
+.yarn/**
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Ignore files for SvelteKit
+.svelte-kit/
+
+# Ignore for build result
+build/
+src/app.html
+static/*.html
+static/**/*.html
+
+# Ignore for GitHub Action (due to space indent)
+.github/workflows/*.yml
+
+# etc
+static/data.json
+
+# README
+README.md

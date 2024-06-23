@@ -1,0 +1,42 @@
+name: Quality Check
+
+on:
+  push:
+    branches: 
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    - name: Get yarn cache directory path
+      id: yarn-cache-dir-path
+      run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
+
+    - name: Cache dependencies
+      uses: actions/cache@v4
+      id: cache
+      with:
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: ${{ runner.os }}-yarn-
+
+    - name: Install dependencies
+      run: |
+        yarn install
+
+    - name: Run `svelte-check`
+      run: |
+        yarn check
+
+    - name: Run `Prettier` & `ESLint`
+      run: |
+        yarn lint
