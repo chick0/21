@@ -21,10 +21,10 @@ export const GameStatus = writable("idle")
 /** @type {import("svelte/store").Writable<import("$lib/types/Card").Card[]>} */
 export const Deck = writable([])
 
-/** @type {import("svelte/store").Writable<import("$lib/types/Card").Card[]>} */
+/** @type {import("svelte/store").Writable<import("$lib/types/Card").Card[]>} Computer Hand */
 export const Computer = writable([])
 
-/** @type {import("svelte/store").Writable<import("$lib/types/Card").Card[]>} */
+/** @type {import("svelte/store").Writable<import("$lib/types/Card").Card[]>} Player Hand */
 export const Player = writable([])
 
 /**
