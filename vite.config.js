@@ -30,8 +30,8 @@ export default defineConfig({
                 id: "?_=21@ch1ck.xyz",
                 display: "standalone",
                 lang: "ko",
-                background_color: "#bbbbbb",
-                theme_color: "#bbbbbb",
+                background_color: "#4485bf",
+                theme_color: "#4485bf",
                 shortcuts: [
                     {
                         name: "게임 시작",

@@ -10,7 +10,7 @@
         flex-wrap: nowrap;
         overflow-x: auto;
 
-        border: 2px solid #bbbbbb;
+        border: 2px solid #bbb;
         border-radius: 24px;
 
         padding: 20px;
