@@ -2,6 +2,9 @@ import { writable } from "svelte/store"
 import { createGameDeck } from "$lib/deck"
 import { START_CARD } from "$lib/options"
 
+export const PageTitle = writable("21!")
+export const PageDescription = writable("")
+
 export const LockConut = writable(0)
 
 export function AddLockCount() {
