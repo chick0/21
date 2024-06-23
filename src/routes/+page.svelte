@@ -5,4 +5,5 @@
 <MetaController />
 
 <a href="/game">game</a>,
-<a href="/rule">rule</a>
+<a href="/rule">rule</a>,
+<a href="/license">license</a>
