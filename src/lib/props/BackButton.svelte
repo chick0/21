@@ -13,8 +13,8 @@
         text-decoration: none;
 
         display: inline-block;
-        width: 45px;
-        height: 45px;
+        width: 50px;
+        height: 50px;
 
         position: fixed;
         top: 30px;
@@ -23,6 +23,16 @@
 
         border: 0;
         border-radius: 50%;
+    }
+
+    @media (max-width: 768px) {
+        .back-button {
+            width: 45px;
+            height: 45px;
+
+            top: 15px;
+            left: 15px;
+        }
     }
 
     .inner {
