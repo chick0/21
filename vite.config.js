@@ -15,16 +15,16 @@ export default defineConfig({
                 // description: "",
                 icons: [
                     {
-                        sizes: "128x128",
-                        src: "/icon/128.png",
-                    },
-                    {
                         sizes: "192x192",
                         src: "/icon/192.png",
+                        type: "image/png",
+                        purpose: "maskable",
                     },
                     {
                         sizes: "256x256",
                         src: "/icon/256.png",
+                        type: "image/png",
+                        purpose: "maskable",
                     },
                 ],
                 id: "?_=21@ch1ck.xyz",
@@ -32,12 +32,6 @@ export default defineConfig({
                 lang: "ko",
                 background_color: "#4485bf",
                 theme_color: "#4485bf",
-                shortcuts: [
-                    {
-                        name: "게임 시작",
-                        url: "/game/",
-                    },
-                ],
             },
         }),
     ],
