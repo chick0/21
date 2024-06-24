@@ -4,7 +4,7 @@ import { POINT_JACK, POINT_QUEEN, POINT_KING } from "$lib/options"
  * @param {import("$lib/types/Card").Card} card
  */
 export function getCardPath(card) {
-    return `/card/${card}.png`
+    return `/_card/${card}.png`
 }
 
 /**

@@ -1,5 +1,6 @@
 <script>
     import MetaController from "$lib/controller/MetaController.svelte"
+    import Card from "$lib/props/Card.svelte"
     import Buttons from "$lib/layout/Buttons.svelte"
     import Button from "$lib/props/Button.svelte"
     import Icon from "$lib/props/Icon.svelte"
@@ -9,7 +10,7 @@
 
 <div class="section">
     <div class="intro">
-        <img src="/card/Back.png" alt="카드 뒷면 이미지" width="140" height="190" />
+        <Card card="Back" />
 
         <h1 class="title">21!</h1>
         <p class="description">카드의 숫자합이 21에 가까우면 승리하는 게임입니다</p>
