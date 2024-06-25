@@ -1,5 +1,6 @@
 <script>
     import "$lib/css/base.css"
+    import "$lib/css/theme.css"
     import ManifestController from "$lib/controller/ManifestController.svelte"
     import MetaController from "$lib/controller/MetaController.svelte"
     import LoadingController from "$lib/controller/LoadingController.svelte"
