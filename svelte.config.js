@@ -15,6 +15,9 @@ const config = {
         version: {
             pollInterval: 30 * 1000,
         },
+        paths: {
+            relative: false,
+        },
     },
 }
 
