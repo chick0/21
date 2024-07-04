@@ -2,13 +2,13 @@
 
 ```bash
 # Start the server and open the app in a new browser tab
-yarn dev
+pnpm dev
 ```
 
 ## Building
 
 ```bash
-yarn build
+pnpm build
 
 # Or this (recommended)
 bash ./build.sh
