@@ -2,8 +2,9 @@
     "name": "21",
     "private": true,
     "scripts": {
-        "dev": "vite dev --port 2121 --strictPort --open",
+        "dev": "vite dev",
         "build": "vite build",
+        "postbuild": "node tools/postbuild.js",
         "preview": "vite preview",
         "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
