@@ -1,3 +1,3 @@
 #!/bin/bash
-yarn install
-yarn build
+pnpm install --prod
+pnpm build

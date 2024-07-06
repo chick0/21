@@ -1,8 +1,6 @@
-# Ignore files for PNPM, NPM and YARN
-.yarn/**
+# Ignore files for pnpm
 pnpm-lock.yaml
 package-lock.json
-yarn.lock
 
 # Ignore files for SvelteKit
 .svelte-kit/

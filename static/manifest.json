@@ -1,0 +1,24 @@
+{
+    "name": "21!",
+    "short_name": "21",
+    "description": "21은 카드의 숫자합이 21에 가까우면 승리하는 게임입니다.",
+    "icons": [
+        {
+            "sizes": "192x192",
+            "src": "/icon/192.png",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "sizes": "256x256",
+            "src": "/icon/256.png",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "id": "?_=21@ch1ck.xyz",
+    "display": "standalone",
+    "lang": "ko",
+    "background_color": "#4485bf",
+    "theme_color": "#4485bf"
+}

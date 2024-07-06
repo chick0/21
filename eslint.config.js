@@ -26,9 +26,7 @@ export default [
             "build/",
             "dist/",
 
-            // Ignore files for PNPM, NPM and YARN
-            ".yarn/",
-            "yarn.lock",
+            // Ignore files for pnpm
             "pnpm-lock.yaml",
             "package-lock.json",
             "node_modules/",
